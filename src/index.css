@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-gradient-to-br from-[#e3efff] via-[#f8faff] to-[#e9f2ff] text-gray-800;
+  font-feature-settings: 'ss01' on, 'cv01' on;
+  font-smooth: antialiased;
+}
+
+button {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.event-box {
+  @apply text-xs px-2 py-1 rounded-full font-medium shadow;
+}
+
+.calendar-cell {
+  @apply rounded-xl p-3 h-28 transition-all cursor-pointer flex flex-col justify-start border border-transparent hover:ring-2 hover:ring-indigo-300;
+}
+
+.calendar-cell-today {
+  @apply bg-indigo-50 border border-indigo-400 ring-2 ring-indigo-200 shadow-md;
+}
+
+.calendar-cell-other-month {
+  @apply bg-white bg-opacity-20 text-gray-400;
+}
+
+.calendar-cell-current-month {
+  @apply bg-white text-black;
+}
+
